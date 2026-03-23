@@ -1,0 +1,23 @@
+# Secrets - NEVER commit these
+.env
+
+# Data files - too large for GitHub, add to Google Drive or S3
+data/*.csv
+data/*.json
+!data/sample/*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+env/
+
+# Outputs
+outputs/figures/*.png
+outputs/figures/*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
