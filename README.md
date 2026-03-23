@@ -4,9 +4,9 @@
 
 A brand spends £500k on influencer partnerships this year. At the end of the year, their CMO asks: **which of those partnerships actually moved the needle?**
 
-Most marketing teams can't answer that question. Not because the data doesn't exist — but because nobody built the right system to ask it.
+Most marketing teams can't answer that question. Not because the data doesn't exist, but because nobody built the right system to ask it.
 
-This pipeline answers that question. It tells a brand not just whether sponsorships work — but **which type of creator, which disclosure strategy, and which audience segment drives real business outcomes**. And critically, when the data is telling you something is going wrong before it becomes a crisis.
+This pipeline answers that question. It tells a brand not just whether sponsorships work but also **which type of creator, which disclosure strategy, and which audience segment drives real business outcomes**. And critically, when the data is telling you something is going wrong before it becomes a crisis.
 
 ---
 
@@ -21,7 +21,7 @@ Four distinct creator segments, each requiring a completely different campaign s
 | **Diminishing returns** | Tech-Macro, implicit | Lowest (3.3%) | Lowest (0.772) | 0.1%/day | Avoid — hidden sponsorship backfires at scale |
 | **Consistency segment** | Mixed | Moderate | Moderate | 0.25%/day | Optimise for reliability, not peak metrics |
 
-**The headline finding:** There is no one-size-fits-all model for influencer marketing. Using the wrong strategy in the wrong segment doesn't just waste budget — it actively destroys audience trust.
+**The headline finding:** There is no one-size-fits-all model for influencer marketing. Using the wrong strategy in the wrong segment doesn't just waste budget; it actively destroys audience trust.
 
 **The honest causal finding:** A matched OLS model shows +1.45pp engagement lift from sponsorship. But once creator identity and time are controlled via two-way fixed effects, that effect disappears (β=−0.0007, p=0.878). Sponsorship alone does not drive engagement. Creator-audience trust, brand fit, and content quality do.
 
@@ -65,7 +65,7 @@ YouTube Data API v3
    • Random Forest + SHAP per cluster per target metric
         │
         ▼
-06_claude_recommendations.ipynb   ← NEW
+06_claude_recommendations.ipynb   ← Future scope 
    • Cluster profile → Claude API → campaign brief
    • Disclosure strategy, timing, risk flags, measurement framework
 ```
@@ -96,7 +96,7 @@ pip install -r requirements.txt
 
 # 3. Set up API keys
 cp .env.example .env
-# Edit .env and add your YouTube API key and Anthropic API key
+# Edit .env and add your YouTube API key
 
 # 4. Add your data
 # Place your CSV files in the data/ folder
@@ -116,26 +116,25 @@ jupyter lab
 
 **comments_data_2024_2025.csv** — comment-level data (videoId, commentText, commentLikeCount, commentPublishedAt)
 
-See `data/sample/` for anonymised example rows showing the expected format.
 
 ---
 
-## What's being built next
+## What future scope can be built next:
 
-- **Streamlit dashboard** — brand managers run recommendations without touching code
-- **Live sentiment monitoring** — n8n workflow that tracks post-sponsorship sentiment and alerts when a campaign moves in the wrong direction
+- **Streamlit dashboard**: brand managers run recommendations without touching code
+- **Live sentiment monitoring**: n8n workflow that tracks post-sponsorship sentiment and alerts when a campaign moves in the wrong direction
 - **MMM integration** — connect creator-level performance signals to channel-level budget attribution
 
 ---
 
 ## Tech stack
 
-Python · Pandas · RoBERTa (HuggingFace Transformers) · statsmodels · scikit-learn · SHAP · YouTube Data API v3 · Anthropic Claude API
+Python · Pandas · RoBERTa (HuggingFace Transformers) · statsmodels · scikit-learn · SHAP · YouTube Data API v3
 
 ---
 
 ## About this project
 
-Built as part of an MSc Business Analytics research project examining the causal impact of sponsorship disclosure on creator reputation and viewer engagement across 30 YouTube creators, 1,193 videos, and 55,000+ audience comments over 12 months.
+Built as part of an influencer marketing analytics research project examining the causal impact of sponsorship disclosure on creator reputation and viewer engagement across 30 YouTube creators, 1,193 videos, and 55,000+ audience comments over 12 months.
 
-The pipeline is designed to be modular and reusable — the same architecture applies to any platform where creator-brand dynamics generate measurable audience signals.
+The pipeline is designed to be modular and reusable, highlighting that the same architecture applies to any platform where creator-brand dynamics generate measurable audience signals.
